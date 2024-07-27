@@ -30,7 +30,7 @@ View the application on the following URLs:
 
 `3. localhost/redoc`
 
-Sometimes the Ingress resource might cause an issue in local, so the same can be viewed via the service using below urls:
+Sometimes the Ingress resource might cause an issue in local it might take sometime to be available, so the same can be viewed via the service using below urls:
 
 `1. localhost:31212`
 
