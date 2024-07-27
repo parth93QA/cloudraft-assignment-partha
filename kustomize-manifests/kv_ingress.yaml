@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cloudraft-kv-store-service-ingress
+  labels:
+    name: cloudraft-kv-store-service-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: cloudraft-kv.localdev.me
+  - http:  
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: cloudraft-kv-store-service
+            port: 
+              number: 80
+status:
+  loadBalancer:
+    ingress:
+    - hostname: localhost
+
+
+

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudraft-kv-store
+spec:
+  selector:
+    matchLabels:
+      app: cloudraft-kv-store
+  template:
+    metadata:
+      labels:
+        app: cloudraft-kv-store
+    spec:
+      containers:
+      - name: cloudraft-kv-store-cointainer
+        image: cloudraft_kv_store:v1
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
