@@ -20,4 +20,4 @@ FROM base as final_kv_image
 WORKDIR /app
 COPY . .
 EXPOSE 8080
-CMD  uvicorn main:app --host 0.0.0.0 --port 8080 --workers 4
+CMD  uvicorn main:app --host 0.0.0.0 --port 8080 --workers 1
