@@ -16,6 +16,7 @@ REQUEST_LATENCY = Summary(
 )
 
 
+
 @app.middleware("http")
 async def prometheus_middleware(request: Request, call_next):
     method = request.method
@@ -70,3 +71,5 @@ async def search_keys_by_prefix_or_suffix_from_kv(prefix: Optional[str] = Query(
         return {"Matching Key List" : list_of_keys}
     except:
         return {"Searching keys with {prefix} failed"}    
+
+
